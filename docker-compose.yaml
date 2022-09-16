@@ -1,0 +1,9 @@
+version: "3"
+services:
+  goapp: # サービス名
+    build: . # ビルドに使うDockerファイルのパス
+    restart: always
+    container_name: "goapp"
+    tty: true # コンテナの永続化
+    volumes:
+      - ./app:/go/src/app # マウントディレクトリ
